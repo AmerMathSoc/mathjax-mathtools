@@ -1,0 +1,26 @@
+{
+  "name": "mathjax-mathtools",
+  "main": "./mathtools.js",
+  "version": "1.0.0",
+  "description": "mathtoolsat, xmathtoolsat, flalign environments from amsmath for MathJax's TeX input",
+  "keywords": [
+    "MathJax",
+    "TeX",
+    "amsmath"
+  ],
+  "license": "Apache-2.0",
+  "contributors": [
+    "Peter Krautzberger (https://github.com/pkra)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AmerMathSoc/mathjax-mathtools"
+  },
+  "homepage": "https://github.com/AmerMathSoc/mathjax-mathtools/",
+  "bugs": {
+    "url": "https://github.com/AmerMathSoc/mathjax-mathtools/issues"
+  },
+  "scripts": {
+    "test": "echo 'No tests yet'"
+  }
+}
