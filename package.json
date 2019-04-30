@@ -1,16 +1,17 @@
 {
   "name": "mathjax-mathtools",
   "main": "./mathtools.js",
-  "version": "1.0.0",
-  "description": "mathtoolsat, xmathtoolsat, flalign environments from amsmath for MathJax's TeX input",
+  "version": "1.1.0",
+  "description": "MathJax extension reimplementing (parts of) the mathtools package",
   "keywords": [
     "MathJax",
     "TeX",
-    "amsmath"
+    "mathtools"
   ],
   "license": "Apache-2.0",
   "contributors": [
-    "Peter Krautzberger (https://github.com/pkra)"
+    "Peter Krautzberger (https://github.com/pkra)",
+    "Davide Cervone (https://github.com/dpvc)"
   ],
   "repository": {
     "type": "git",
