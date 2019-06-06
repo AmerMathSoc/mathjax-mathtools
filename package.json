@@ -1,7 +1,7 @@
 {
   "name": "mathjax-mathtools",
   "main": "./mathtools.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "MathJax extension reimplementing (parts of) the mathtools package",
   "keywords": [
     "MathJax",
