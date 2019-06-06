@@ -173,8 +173,8 @@ MathJax.Hub.Register.StartupHook('TeX AMSmath Ready', function() {
           );
         }
         if (this.table[m][0].columnalign !== 'left') {
-          this.table[m][0].data.unshift(null);
-          this.table[m][0].SetData(
+          this.table[m][0].data[0].data.unshift(null);
+          this.table[m][0].data[0].SetData(
             0,
             MML.mspace().With({ width: TEX.config.MultlineGap || '2em' })
           );
