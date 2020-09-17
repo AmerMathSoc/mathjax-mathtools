@@ -15,14 +15,14 @@
  */
 
 MathJax.Extension['mathtools'] = {
-  version: '1.1.0'
+  version: '1.1.0',
 };
 
-MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+MathJax.Hub.Register.StartupHook('TeX Jax Ready', function () {
   var TEX = MathJax.InputJax.TeX;
   TEX.Definitions.Add({
     macros: {
-      coloneqq: ['Macro', '\\mathrel{≔}']
+      coloneqq: ['Macro', '\\mathrel{≔}'],
     },
     environment: {
       dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
@@ -46,12 +46,12 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
       Vsmallmatrix: ['ExtensionEnv', null, 'AMSmath'],
       'Vsmallmatrix*': ['ExtensionEnv', null, 'AMSmath'],
 
-      multlined: ['ExtensionEnv', null, 'AMSmath']
-    }
+      multlined: ['ExtensionEnv', null, 'AMSmath'],
+    },
   });
 });
 
-MathJax.Hub.Register.StartupHook('TeX AMSmath Ready', function() {
+MathJax.Hub.Register.StartupHook('TeX AMSmath Ready', function () {
   var MML = MathJax.ElementJax.mml,
     TEX = MathJax.InputJax.TeX,
     STACKITEM = TEX.Stack.Item;
@@ -77,17 +77,17 @@ MathJax.Hub.Register.StartupHook('TeX AMSmath Ready', function() {
       Vsmallmatrix: ['MtSmallMatrix', null, '\\Vert', '\\Vert', 'c'],
       'Vsmallmatrix*': ['MtSmallMatrix', null, '\\Vert', '\\Vert'],
 
-      multlined: 'MtMultlined'
-    }
+      multlined: 'MtMultlined',
+    },
   });
 
   TEX.Parse.Augment({
-    MtMatrix: function(begin, open, close) {
+    MtMatrix: function (begin, open, close) {
       var align = this.GetBrackets('\\begin{' + begin.name + '}') || 'c';
       return this.Array(begin, open, close, align);
     },
 
-    MtSmallMatrix: function(begin, open, close, align) {
+    MtSmallMatrix: function (begin, open, close, align) {
       if (!align)
         align = this.GetBrackets('\\begin{' + begin.name + '}') || 'c';
       return this.Array(
@@ -102,7 +102,7 @@ MathJax.Hub.Register.StartupHook('TeX AMSmath Ready', function() {
       );
     },
 
-    MtMultlined: function(begin) {
+    MtMultlined: function (begin) {
       var pos = this.GetBrackets('\\begin{' + begin.name + '}') || '';
       var width = pos ? this.GetBrackets('\\begin{' + begin.name + '}') : null;
       if (!pos.match(/^[cbt]$/)) {
@@ -117,27 +117,27 @@ MathJax.Hub.Register.StartupHook('TeX AMSmath Ready', function() {
             displaystyle: true,
             rowspacing: '.5em',
             width: width,
-            columnwidth: '100%'
-          }
+            columnwidth: '100%',
+          },
         }),
         pos || 'c'
       );
     },
 
-    HandleShove: function(name, shove) {
+    HandleShove: function (name, shove) {
       var top = this.stack.Top();
       if (top.type !== 'multline' && top.type !== 'multlined') {
         TEX.Error([
           'CommandInMultlined',
           '%1 can only appear within the multline or multlined environments',
-          name
+          name,
         ]);
       }
       if (top.data.length) {
         TEX.Error([
           'CommandAtTheBeginingOfLine',
           '%1 must come at the beginning of the line',
-          name
+          name,
         ]);
       }
       top.data.shove = shove;
@@ -156,11 +156,11 @@ MathJax.Hub.Register.StartupHook('TeX AMSmath Ready', function() {
         mml = mrow;
       }
       this.Push(mml);
-    }
+    },
   });
 
   STACKITEM.multlined = STACKITEM.multline.Subclass({
-    EndTable: function() {
+    EndTable: function () {
       if (this.data.length || this.row.length) {
         this.EndEntry();
         this.EndRow();
@@ -181,12 +181,12 @@ MathJax.Hub.Register.StartupHook('TeX AMSmath Ready', function() {
         }
       }
       this.SUPER(arguments).EndTable.call(this);
-    }
+    },
   });
 });
 
 MathJax.Callback.Queue([
   'loadComplete',
   MathJax.Ajax,
-  '[mathtools]/mathtools.js'
+  '[mathtools]/mathtools.js',
 ]);
