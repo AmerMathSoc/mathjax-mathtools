@@ -22,6 +22,10 @@
     "url": "https://github.com/AmerMathSoc/mathjax-mathtools/issues"
   },
   "scripts": {
+    "release": "standard-version",
     "test": "echo 'No tests yet'"
+  },
+  "devDependencies": {
+    "standard-version": "^9.0.0"
   }
 }
