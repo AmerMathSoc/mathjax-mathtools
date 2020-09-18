@@ -7,6 +7,7 @@ MathJax TeX extension aiming to (partially) implement the [mathtools package](ht
 Supported macros and environments:
 
 * `coloneqq`
+* `xleftrightarrow`
 * `dcases`
 * `matrix*`, `pmatrix*`, `bmatrix*`, `Bmatrix*`, `vmatrix*`, `Vmatrix*`
 * `smallmatrix*`, `psmallmatrix`, `psmallmatrix*`, `bsmallmatrix`, `bsmallmatrix*`, `Bsmallmatrix`, `Bsmallmatrix*`, `vsmallmatrix`, `vsmallmatrix*`,  `Vsmallmatrix`, `Vsmallmatrix*`
