@@ -15,7 +15,7 @@
  */
 
 MathJax.Extension['mathtools'] = {
-  version: '1.1.0',
+  version: '1.2.0',
 };
 
 MathJax.Hub.Register.StartupHook('TeX Jax Ready', function () {
@@ -23,6 +23,7 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function () {
   TEX.Definitions.Add({
     macros: {
       coloneqq: ['Macro', '\\mathrel{≔}'],
+      xleftrightarrow: ['xArrow', 0x2194, 7, 6],
     },
     environment: {
       dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
