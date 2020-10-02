@@ -27,6 +27,7 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function () {
     },
     environment: {
       dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
+      rcases: ['Array', null, '.', '\\}', 'll', null, '.2em', 'D'],
 
       'matrix*': ['ExtensionEnv', null, 'AMSmath'],
       'pmatrix*': ['ExtensionEnv', null, 'AMSmath'],
