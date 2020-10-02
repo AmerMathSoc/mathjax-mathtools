@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/AmerMathSoc/mathjax-mathtools/compare/v1.2.0...v1.3.0) (2020-10-02)
+
+
+### Features
+
+* support rcases environment ([38b1c63](https://github.com/AmerMathSoc/mathjax-mathtools/commit/38b1c6310525e31dd03c8ac844d740b90ffd9fd8)), closes [#4](https://github.com/AmerMathSoc/mathjax-mathtools/issues/4)
+
 ## [1.2.0](https://github.com/AmerMathSoc/mathjax-mathtools/compare/v1.1.1...v1.2.0) (2020-09-18)
 
 
