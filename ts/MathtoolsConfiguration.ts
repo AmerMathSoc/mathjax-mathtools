@@ -15,21 +15,21 @@
  */
 
 
-import {ArrayItem} from '../base/BaseItems.js';
-import {MultlineItem} from '../ams/AmsItems.js';
-import {StackItem} from '../StackItem.js';
-import ParseUtil from '../ParseUtil.js';
-import ParseMethods from '../ParseMethods.js';
-import {Configuration} from '../Configuration.js';
-import {ParseMethod} from '../Types.js';
-import {AmsMethods} from '../ams/AmsMethods.js';
-import BaseMethods from '../base/BaseMethods.js';
-import TexParser from '../TexParser.js';
-import TexError from '../TexError.js';
-import {MmlNode} from '../../../core/MmlTree/MmlNode.js';
-import {CommandMap, EnvironmentMap} from '../SymbolMap.js';
-import NodeUtil from '../NodeUtil.js';
-import {TexConstant} from '../TexConstants.js';
+import {ArrayItem} from 'mathjax-full/js/input/tex/base/BaseItems.js';
+import {MultlineItem} from 'mathjax-full/js/input/tex/ams/AmsItems.js';
+import {StackItem} from 'mathjax-full/js/input/tex/StackItem.js';
+import ParseUtil from 'mathjax-full/js/input/tex/ParseUtil.js';
+import ParseMethods from 'mathjax-full/js/input/tex/ParseMethods.js';
+import {Configuration} from 'mathjax-full/js/input/tex/Configuration.js';
+import {ParseMethod} from 'mathjax-full/js/input/tex/Types.js';
+import {AmsMethods} from 'mathjax-full/js/input/tex/ams/AmsMethods.js';
+import BaseMethods from 'mathjax-full/js/input/tex/base/BaseMethods.js';
+import TexParser from 'mathjax-full/js/input/tex/TexParser.js';
+import TexError from 'mathjax-full/js/input/tex/TexError.js';
+import {MmlNode} from 'mathjax-full/js/core/MmlTree/MmlNode.js';
+import {CommandMap, EnvironmentMap} from 'mathjax-full/js/input/tex/SymbolMap.js';
+import NodeUtil from 'mathjax-full/js/input/tex/NodeUtil.js';
+import {TexConstant} from 'mathjax-full/js/input/tex/TexConstants.js';
 
 
 let MathtoolsMethods: Record<string, ParseMethod> = {};
